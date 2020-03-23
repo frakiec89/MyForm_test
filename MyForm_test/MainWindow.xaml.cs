@@ -52,16 +52,14 @@ namespace MyForm_test
 
         }
 
-       
         private void StartComonent()
         {
             controls.Add(StartName( 0));
             controls.Add(StartData(1));
             controls.Add(StartReg(2));
-
+            controls.Add( StartDocumebt(3));
             // todo : методы добавдяем сюда 
         }
-       
 
        /// <summary>
        /// назад 
@@ -70,13 +68,11 @@ namespace MyForm_test
        /// <param name="e"></param>
         private void bTDown_Click(object sender, RoutedEventArgs e)
         {
-
             if (count >0)
             {
                 count--;
                 SetStep(controls[count]);
             }
-
         }
 
         /// <summary>
@@ -177,6 +173,84 @@ namespace MyForm_test
             return new ControlList(c, controlsStarReg);
         }
 
+        /// <summary>
+        /// Документ  УЛ
+        /// </summary>
+        /// <param name="c"></param>
+        /// <returns></returns>
+        ControlList StartDocumebt(int c)
+        {
+
+            List<Control> controlsDobument = new List<Control>();
+
+            var lbGrashd = new Label();
+            lbGrashd.Content = "Гражданство";
+            var tBGrashd = new TextBox();
+            tBGrashd.Text = "РФ";
+
+            var lbNameDocumentEducation  = new Label();
+            lbNameDocumentEducation.Content = "Введите название документа удостоверяющий личность";
+
+            var vs = new List<string>
+            {
+                "Паспорт гражданина РФ" ,
+                "Заграничный паспорт гражданина РФ",
+                "Паспорт гражданина иностранного государства",
+                "Свидетельство о рождении",
+                "Военный билет",
+                "Дипломатический паспорт гражданина РФ",
+                "Паспорт моряка",
+                "Свидетельство о рождении, выданное уполномоченным органом иностранного государства",
+                "Временное удостоверение личности гражданина РФ",
+                "Вид на жительство",
+                "Удостоверение личности гражданина Российской Федерации в виде пластиковой карты",
+                "Служебный паспорт",
+                "Удостоверение личности военнослужащего",
+                " Удостоверение беженца",
+                "Свидетельство о рассмотрении ходатайства о признании гражданина беженцем",
+                "Иной документ, удостоверяющий личность",
+            }; 
+
+            var cBDocumentEducation = new ComboBox() { ItemsSource = vs }; //todo: переписать  из источника
+            cBDocumentEducation.SelectedIndex = 0;
+
+            var lbSeria = new Label();
+            lbSeria.Content = "Серия";
+            var tBSeria = new TextBox();
+
+            var lbCode = new Label();
+            lbCode.Content = "Номер";
+            var tBCode = new TextBox();
+
+            var lbKemV = new Label();
+            lbKemV.Content = "Кем выдан";
+            var tBKemV = new TextBox();
+
+            var lbData = new Label();
+            lbData.Content = "Дата Выдачи докумета";
+
+            var data = new DatePicker();
+
+            var lbMr = new Label();
+            lbMr.Content = "Место рождения (как в паспорте, без сокращений)";
+            var tBMr = new TextBox();
+
+            controlsDobument.AddRange(new List<Control>
+            {
+                lbGrashd, tBGrashd, lbNameDocumentEducation, cBDocumentEducation,
+
+                lbSeria, tBSeria , lbCode ,tBCode , lbKemV, tBKemV,lbData, data ,  lbMr,tBMr
+            }
+                );
+
+            return new ControlList(c, controlsDobument);
+        }
+
+        /// <summary>
+        /// получает  форму ввода адреса  
+        /// </summary>
+        /// <param name="st"></param>
+        /// <returns></returns>
         private static List<Control> GetAddressControlls( string  st)
         {
             List<Control> controlsStarReg = new List<Control>();

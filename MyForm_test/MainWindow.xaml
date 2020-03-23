@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MyForm_test"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="550" Width="1000">
 
     <Grid >
 
@@ -25,9 +25,12 @@
             <ColumnDefinition Width="30*"/>
         </Grid.ColumnDefinitions>
 
-        <Button Name="bTDown" Grid.Column="0" Content="Назад" Click="bTDown_Click"
+
+        <Button  Name="bTDown" Grid.Column="0" Content="Назад" Click="bTDown_Click"
                 HorizontalAlignment="Right"
-                Grid.Row="2" Width = "75" />
+                Grid.Row="2" Width = "75" 
+                
+                 />
 
         <Button Name="bTUp" Grid.Column="2" Content="Вперед" Click="bTUp_Click"
                 HorizontalAlignment="Left"
@@ -36,8 +39,9 @@
         <Border Grid.Column="1"
                     Margin="80,0,81,0" Grid.Row="1" Grid.RowSpan="5" Background="GhostWhite" BorderBrush="Gainsboro" BorderThickness="1">
             <ScrollViewer >
-                <StackPanel  Name="Content" HorizontalAlignment="Center"
-                             />
+                <StackPanel  Name="Content" HorizontalAlignment="Center"  
+                             Margin="10,10,10,10 "  >
+                </StackPanel>
             </ScrollViewer>
 
         </Border>
@@ -49,9 +53,10 @@
 
         <Border Grid.Column="1"
                     Margin="80,10,81,0" Grid.Row="6" Background="GhostWhite" BorderBrush="Gainsboro" BorderThickness="1">
-            <StackPanel  Name="ContentBec" HorizontalAlignment="Center"
+            <StackPanel  Name="ContentBec" HorizontalAlignment="Center" 
                     />
         </Border>
-
+   
     </Grid>
+  
 </Window>
