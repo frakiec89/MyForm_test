@@ -37,8 +37,11 @@
                 Grid.Row="2" Width="75" />
 
         <Border Grid.Column="1"
-                    Margin="80,0,81,0" Grid.Row="1" Grid.RowSpan="5" Background="GhostWhite" BorderBrush="Gainsboro" BorderThickness="1">
-            <ScrollViewer >
+                    Margin="80,0,81,0" Grid.Row="1" Grid.RowSpan="5"
+                Background="GhostWhite" 
+                BorderBrush="Gainsboro" BorderThickness="1">
+            
+            <ScrollViewer HorizontalScrollBarVisibility="Auto" >
                 <StackPanel  Name="Content" HorizontalAlignment="Center"  
                              Margin="10,10,10,10 "  >
                 </StackPanel>
@@ -51,11 +54,7 @@
                VerticalAlignment="Center"
                />
 
-        <Border Grid.Column="1"
-                    Margin="80,10,81,0" Grid.Row="6" Background="GhostWhite" BorderBrush="Gainsboro" BorderThickness="1">
-            <StackPanel  Name="ContentBec" HorizontalAlignment="Center" 
-                    />
-        </Border>
+       
    
     </Grid>
   

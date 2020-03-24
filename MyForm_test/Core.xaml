@@ -244,9 +244,9 @@
 
     <!-- CheckBox -->
     <Style TargetType="{x:Type CheckBox}">
-        <Setter Property="Background" Value="{StaticResource ControlBackgroundNormal}" />
+        <Setter Property="Background" Value="{StaticResource BorderMenuItem}" />
         <Setter Property="BorderBrush" Value="{StaticResource ControlBorderBrush}" />
-        <Setter Property="Foreground" Value="{StaticResource ControlForegroundWhite}" />
+        <Setter Property="Foreground" Value="{StaticResource ControlForeground}" />
         <Setter Property="HorizontalContentAlignment" Value="Left" />
         <Setter Property="Padding" Value="4,0" />
         <Setter Property="VerticalContentAlignment" Value="Center" />
@@ -4894,4 +4894,34 @@
         </Setter>
     </Style>
 
+    <!--Label 
+    <Style x:Key="{x:Type Label}"
+       TargetType="Label">
+        <Setter Property="HorizontalContentAlignment"
+          Value="Left" />
+        <Setter Property="VerticalContentAlignment"
+          Value="Top" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Label">
+                    <Border>
+                        <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                            VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                            RecognizesAccessKey="True" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsEnabled"
+                   Value="false">
+                            <Setter Property="Foreground">
+                                <Setter.Value>
+                                    <SolidColorBrush Color="{DynamicResource DisabledForegroundColor}" />
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+-->
 </ResourceDictionary>
